@@ -301,6 +301,10 @@ void test_Aaron_shoots2(void)
     assert(false == c_alive);
 }
 
+/*
+*   Strategy #1
+*   Shoot The most accurate shooter before shooting anyone else.
+*/
 void strat1()
 {
     bool a_alive = true;
@@ -336,6 +340,12 @@ void strat1()
         c_win++;
     }
 }
+
+/*
+*   Strategy #2
+*   Shoot The most accurate shooter before shooting anyone else.
+*   Aaron intentionally misses his first shot.
+*/
 void strat2()
 {
     bool a_alive = true;
