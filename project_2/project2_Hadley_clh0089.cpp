@@ -440,7 +440,7 @@ int main()
 
     cout << "***Welcome to Caelan's Duel Simulator***\n";
     srand(time(0));
-    const int num_runs = 10000;
+    const int NUM_RUNS = 10000;
 
     test_at_least_two_alive();
 
@@ -468,7 +468,7 @@ int main()
     {
         strat1();
         duels++;
-    } while (duels < num_runs);
+    } while (duels < NUM_RUNS);
 
     double a_per = (double)a_win / (double)duels;
     double b_per = (double)b_win / (double)duels;
@@ -488,7 +488,7 @@ int main()
     {
         strat2();
         duels++;
-    } while (duels < num_runs);
+    } while (duels < NUM_RUNS);
 
     a_per = (double)a_win / (double)duels;
     b_per = (double)b_win / (double)duels;
