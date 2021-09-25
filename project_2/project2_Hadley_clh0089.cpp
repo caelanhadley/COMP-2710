@@ -21,12 +21,15 @@ int a_win = 0;
 int b_win = 0;
 int c_win = 0;
 
+const int AARON_SHOOT_CHANCE = 33;
+const int BOB_SHOOT_CHANCE = 50;
+
 // My Functions
 
 // Returns true 1/3 of the time the function is called.
-bool third()
+bool aaron_fire()
 {
-    if (rand() % 100 <= 33)
+    if (rand() % 100 <= AARON_SHOOT_CHANCE)
     {
         return true;
     }
@@ -37,9 +40,9 @@ bool third()
 }
 
 // Returns true 1/2 of the time the function is called.
-bool half()
+bool bob_fire()
 {
-    if (rand() % 100 <= 50)
+    if (rand() % 100 <= BOB_SHOOT_CHANCE)
     {
         return true;
     }
@@ -75,7 +78,7 @@ bool at_least_two_alive(bool A_alive, bool B_alive, bool C_alive)
 
 void Aaron_shoots1(bool &B_alive, bool &C_alive)
 {
-    if (third())
+    if (aaron_fire())
     {
         if (C_alive)
         {
@@ -90,7 +93,7 @@ void Aaron_shoots1(bool &B_alive, bool &C_alive)
 
 void Bob_shoots(bool &A_alive, bool &C_alive)
 {
-    if (half())
+    if (bob_fire())
     {
         if (C_alive)
         {
@@ -122,7 +125,7 @@ void Aaron_shoots2(bool &B_alive, bool &C_alive)
 {
     if (!B_alive || !C_alive)
     {
-        if (third())
+        if (aaron_fire())
         {
             if (C_alive)
             {
