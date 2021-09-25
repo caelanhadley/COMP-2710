@@ -200,14 +200,6 @@ void test_Aaron_shoots1(void)
     b_alive = c_alive = true;
     Aaron_shoots1(b_alive, c_alive);
     assert(true == b_alive);
-    // if (c_alive)
-    // {
-    //     cout << "\t\tAaron Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tCharlie was shot.\n";
-    // }
 
     // Test Case 2
     cout << "\tCase 2: Bob dead, Charlie alive\n";
@@ -216,14 +208,6 @@ void test_Aaron_shoots1(void)
     c_alive = true;
     Aaron_shoots1(b_alive, c_alive);
     assert(false == b_alive);
-    // if (c_alive)
-    // {
-    //     cout << "\t\tAaron Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tCharlie was shot.\n";
-    // }
 
     // Test Case 3
     cout << "\tCase 3: Bob alive, Charlie dead\n";
@@ -232,14 +216,6 @@ void test_Aaron_shoots1(void)
     c_alive = false;
     Aaron_shoots1(b_alive, c_alive);
     assert(false == c_alive);
-    // if (b_alive)
-    // {
-    //     cout << "\t\tAaron Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tBob was shot.\n";
-    // }
 }
 
 void test_Bob_shoots(void)
@@ -253,28 +229,12 @@ void test_Bob_shoots(void)
     a_alive = c_alive = true;
     Bob_shoots(a_alive, c_alive);
     assert(true == a_alive);
-    // if (c_alive)
-    // {
-    //     cout << "\t\tBob Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tCharlie was shot.\n";
-    // }
 
     cout << "\tCase 2: Aaron dead, Charlie alive\n";
     cout << "\t\tBob is shooting at Charlie\n";
     a_alive = false;
     c_alive = true;
     Bob_shoots(a_alive, c_alive);
-    // if (c_alive)
-    // {
-    //     cout << "\t\tBob Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tCharlie was shot.\n";
-    // }
 
     cout << "\tCase 3: Bob alive, Charlie dead\n";
     cout << "\t\tBob is shooting at Aaron\n";
@@ -282,14 +242,6 @@ void test_Bob_shoots(void)
     c_alive = false;
     Bob_shoots(a_alive, c_alive);
     assert(c_alive == false);
-    // if (c_alive)
-    // {
-    //     cout << "\t\tBob Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tAaron was shot.\n";
-    // }
 }
 void test_Charlie_shoots(void)
 {
@@ -303,7 +255,6 @@ void test_Charlie_shoots(void)
     Charlie_shoots(a_alive, b_alive);
     assert(true == a_alive);
     assert(false == b_alive);
-    // cout << "\tBob was shot.\n";
 
     cout << "\tCase 2: Aaron dead, Bob alive\n";
     cout << "\t\tCharlie is shooting at Bob\n";
@@ -312,7 +263,6 @@ void test_Charlie_shoots(void)
     Charlie_shoots(a_alive, b_alive);
     assert(false == a_alive);
     assert(false == b_alive);
-    // cout << "\t\tBob was shot.\n";
 
     cout << "\tCase 3: Aaron alive, Bob dead\n";
     cout << "\t\tCharlie is shooting at Aaron\n";
@@ -321,7 +271,6 @@ void test_Charlie_shoots(void)
     Charlie_shoots(a_alive, b_alive);
     assert(false == a_alive);
     assert(false == b_alive);
-    // cout << "\t\tAaron was shot.\n";
 }
 
 void test_Aaron_shoots2(void)
@@ -343,14 +292,6 @@ void test_Aaron_shoots2(void)
     c_alive = true;
     Aaron_shoots1(b_alive, c_alive);
     assert(false == b_alive);
-    // if (c_alive)
-    // {
-    //     cout << "\t\tAaron Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tCharlie was shot.\n";
-    // }
 
     cout << "\tCase 3: Bob alive, Charlie dead\n";
     cout << "\t\tAaron is shooting at Bob\n";
@@ -358,14 +299,6 @@ void test_Aaron_shoots2(void)
     c_alive = false;
     Aaron_shoots1(b_alive, c_alive);
     assert(false == c_alive);
-    // if (b_alive)
-    // {
-    //     cout << "\t\tAaron Missed.\n";
-    // }
-    // else
-    // {
-    //     cout << "\t\tBob was shot.\n";
-    // }
 }
 
 void strat1()
@@ -373,7 +306,7 @@ void strat1()
     bool a_alive = true;
     bool b_alive = true;
     bool c_alive = true;
-    //cout << a_alive << b_alive << c_alive << "\n";
+
     do
     {
         if (a_alive)
