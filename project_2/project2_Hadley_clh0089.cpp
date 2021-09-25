@@ -3,7 +3,9 @@
 *   project2_Hadley_clh0089.cpp
 *
 *   Reference(s):
-*   
+*   (1) Stack Overflow - How to format decimal output.
+*   https://stackoverflow.com/questions/16280069/show-two-digits-after-decimal-point-in-c
+*   (2) Project2_hints.pdf
 *   
 *   Compilation/Execution Instrctiions (Run in command line):
 *   # g++ -o a project2_Hadley_clh0089.cpp
@@ -204,7 +206,7 @@ void test_Aaron_shoots1(void)
     // }
     // else
     // {
-    //     cout << "\t\tCharlie is dead.\n";
+    //     cout << "\t\tCharlie was shot.\n";
     // }
 
     // Test Case 2
@@ -220,7 +222,7 @@ void test_Aaron_shoots1(void)
     // }
     // else
     // {
-    //     cout << "\t\tCharlie is dead.\n";
+    //     cout << "\t\tCharlie was shot.\n";
     // }
 
     // Test Case 3
@@ -236,7 +238,7 @@ void test_Aaron_shoots1(void)
     // }
     // else
     // {
-    //     cout << "\t\tBob is dead.\n";
+    //     cout << "\t\tBob was shot.\n";
     // }
 }
 
@@ -257,7 +259,7 @@ void test_Bob_shoots(void)
     // }
     // else
     // {
-    //     cout << "\t\tCharlie is dead.\n";
+    //     cout << "\t\tCharlie was shot.\n";
     // }
 
     cout << "\tCase 2: Aaron dead, Charlie alive\n";
@@ -271,7 +273,7 @@ void test_Bob_shoots(void)
     // }
     // else
     // {
-    //     cout << "\t\tCharlie is dead.\n";
+    //     cout << "\t\tCharlie was shot.\n";
     // }
 
     cout << "\tCase 3: Bob alive, Charlie dead\n";
@@ -286,7 +288,7 @@ void test_Bob_shoots(void)
     // }
     // else
     // {
-    //     cout << "\t\tAaron is dead.\n";
+    //     cout << "\t\tAaron was shot.\n";
     // }
 }
 void test_Charlie_shoots(void)
@@ -301,7 +303,7 @@ void test_Charlie_shoots(void)
     Charlie_shoots(a_alive, b_alive);
     assert(true == a_alive);
     assert(false == b_alive);
-    // cout << "\tBob is dead.\n";
+    // cout << "\tBob was shot.\n";
 
     cout << "\tCase 2: Aaron dead, Bob alive\n";
     cout << "\t\tCharlie is shooting at Bob\n";
@@ -310,7 +312,7 @@ void test_Charlie_shoots(void)
     Charlie_shoots(a_alive, b_alive);
     assert(false == a_alive);
     assert(false == b_alive);
-    // cout << "\t\tBob is dead.\n";
+    // cout << "\t\tBob was shot.\n";
 
     cout << "\tCase 3: Aaron alive, Bob dead\n";
     cout << "\t\tCharlie is shooting at Aaron\n";
@@ -319,7 +321,7 @@ void test_Charlie_shoots(void)
     Charlie_shoots(a_alive, b_alive);
     assert(false == a_alive);
     assert(false == b_alive);
-    // cout << "\t\tAaron is dead.\n";
+    // cout << "\t\tAaron was shot.\n";
 }
 
 void test_Aaron_shoots2(void)
@@ -347,7 +349,7 @@ void test_Aaron_shoots2(void)
     // }
     // else
     // {
-    //     cout << "\t\tCharlie is dead.\n";
+    //     cout << "\t\tCharlie was shot.\n";
     // }
 
     cout << "\tCase 3: Bob alive, Charlie dead\n";
@@ -362,7 +364,7 @@ void test_Aaron_shoots2(void)
     // }
     // else
     // {
-    //     cout << "\t\tBob is dead.\n";
+    //     cout << "\t\tBob was shot.\n";
     // }
 }
 
