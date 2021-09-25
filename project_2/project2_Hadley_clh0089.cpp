@@ -471,9 +471,9 @@ int main()
     double b_per = (double)b_win / (double)duels;
     double c_per = (double)c_win / (double)duels;
 
-    cout << "Aaron won " << a_win << "/10000 duels or " << a_per << "%\n";
-    cout << "Bob won " << b_win << "/10000 duels or " << b_per << "%\n";
-    cout << "Charlie won " << c_win << "/10000 duels or " << c_per << "%\n\n";
+    cout << "Aaron won " << a_win << "/" << duels << " duels or " << a_per << "%\n";
+    cout << "Bob won " << b_win << "/" << duels << " duels or " << b_per << "%\n";
+    cout << "Charlie won " << c_win << "/" << duels << " duels or " << c_per << "%\n\n";
     int a_wins_run1 = a_win;
 
     duels = 0;
