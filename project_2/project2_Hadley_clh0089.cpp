@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <ctime>
+#include <iomanip>
 
 using namespace std;
 
@@ -438,7 +439,6 @@ void strat2()
 
 int main()
 {
-    cout.setf(ios::fixed | ios::showpoint);
     cout << "***Welcome to Caelan's Duel Simulator***\n";
     srand(time(0));
     const int NUM_RUNS = 10000;
@@ -475,9 +475,9 @@ int main()
     double b_per = (double)b_win / (double)duels;
     double c_per = (double)c_win / (double)duels;
 
-    cout << "Aaron won " << a_win << "/" << duels << " duels or " << a_per << "%\n";
-    cout << "Bob won " << b_win << "/" << duels << " duels or " << b_per << "%\n";
-    cout << "Charlie won " << c_win << "/" << duels << " duels or " << c_per << "%\n\n";
+    cout << "Aaron won " << a_win << "/" << duels << " duels or " << setprecision(2) << a_per << "%\n";
+    cout << "Bob won " << b_win << "/" << duels << " duels or " << setprecision(2) << b_per << "%\n";
+    cout << "Charlie won " << c_win << "/" << duels << " duels or " << setprecision(2) << c_per << "%\n\n";
     int a_wins_run1 = a_win;
 
     duels = 0;
