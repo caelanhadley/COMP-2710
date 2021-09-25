@@ -478,7 +478,7 @@ int main()
 
     duels = 0;
     reset_wins();
-    cout << "Ready to test strategy 2 bruh (run 10000 times):\n";
+    cout << "Ready to test strategy 2 (run 10000 times):\n";
     Press_any_key();
 
     do
@@ -491,9 +491,9 @@ int main()
     b_per = (double)b_win / (double)duels;
     c_per = (double)c_win / (double)duels;
 
-    cout << "Aaron won " << a_win << "/10000 duels or " << a_per << "%\n";
-    cout << "Bob won " << b_win << "/10000 duels or " << b_per << "%\n";
-    cout << "Charlie won " << c_win << "/10000 duels or " << c_per << "%\n\n";
+    cout << "Aaron won " << a_win << "/" << duels << " duels or " << a_per << "%\n";
+    cout << "Bob won " << b_win << "/" << duels << " duels or " << b_per << "%\n";
+    cout << "Charlie won " << c_win << "/" << duels << " duels or " << c_per << "%\n\n";
 
     if (a_wins_run1 < a_win)
     {
