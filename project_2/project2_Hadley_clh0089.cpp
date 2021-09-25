@@ -52,6 +52,7 @@ bool bob_fire()
     }
 }
 
+// Sets the number of wins for each competitor to 0.
 void reset_wins()
 {
     a_win = b_win = c_win = 0;
@@ -188,7 +189,7 @@ void test_Aaron_shoots1(void)
     bool b_alive;
     bool c_alive;
 
-    cout << "Unit Testing 2: Function Aaron_shoots1()\n";
+    cout << "Unit Testing 2: Function Aaron_shoots1(Bob_alive, Charlie_alive)\n";
 
     // Test Case 1
     cout << "\tCase 1: Bob alive, Charlie alive\n";
@@ -198,7 +199,7 @@ void test_Aaron_shoots1(void)
     assert(true == b_alive);
     // if (c_alive)
     // {
-    //     cout << "\t\tAaron misses.\n";
+    //     cout << "\t\tAaron Missed.\n";
     // }
     // else
     // {
@@ -214,7 +215,7 @@ void test_Aaron_shoots1(void)
     assert(false == b_alive);
     // if (c_alive)
     // {
-    //     cout << "\t\tAaron misses.\n";
+    //     cout << "\t\tAaron Missed.\n";
     // }
     // else
     // {
@@ -230,7 +231,7 @@ void test_Aaron_shoots1(void)
     assert(false == c_alive);
     // if (b_alive)
     // {
-    //     cout << "\t\tAaron misses.\n";
+    //     cout << "\t\tAaron Missed.\n";
     // }
     // else
     // {
@@ -251,7 +252,7 @@ void test_Bob_shoots(void)
     assert(true == a_alive);
     // if (c_alive)
     // {
-    //     cout << "\t\tBob Misses.\n";
+    //     cout << "\t\tBob Missed.\n";
     // }
     // else
     // {
@@ -265,7 +266,7 @@ void test_Bob_shoots(void)
     Bob_shoots(a_alive, c_alive);
     // if (c_alive)
     // {
-    //     cout << "\t\tBob Misses.\n";
+    //     cout << "\t\tBob Missed.\n";
     // }
     // else
     // {
@@ -280,7 +281,7 @@ void test_Bob_shoots(void)
     assert(c_alive == false);
     // if (c_alive)
     // {
-    //     cout << "\t\tBob Misses.\n";
+    //     cout << "\t\tBob Missed.\n";
     // }
     // else
     // {
@@ -324,10 +325,10 @@ void test_Aaron_shoots2(void)
 {
     bool b_alive, c_alive;
 
-    cout << "Unit Testing 5: Function Aaron_shoots1()\n";
+    cout << "Unit Testing 5: Function Aaron_shoots1(Bob_alive, Charlie_alive)\n";
 
     cout << "\tCase 1: Bob alive, Charlie alive\n";
-    cout << "\t\tAaron intentionally misses his first shot\n";
+    cout << "\t\tAaron intentionally Missed his first shot\n";
     b_alive = c_alive = true;
     Aaron_shoots2(b_alive, c_alive);
     assert(true == b_alive && true == c_alive);
@@ -341,7 +342,7 @@ void test_Aaron_shoots2(void)
     assert(false == b_alive);
     // if (c_alive)
     // {
-    //     cout << "\t\tAaron misses.\n";
+    //     cout << "\t\tAaron Missed.\n";
     // }
     // else
     // {
@@ -356,7 +357,7 @@ void test_Aaron_shoots2(void)
     assert(false == c_alive);
     // if (b_alive)
     // {
-    //     cout << "\t\tAaron misses.\n";
+    //     cout << "\t\tAaron Missed.\n";
     // }
     // else
     // {
@@ -437,7 +438,7 @@ void strat2()
 
 int main()
 {
-
+    cout.setf(ios::fixed | ios::showpoint);
     cout << "***Welcome to Caelan's Duel Simulator***\n";
     srand(time(0));
     const int NUM_RUNS = 10000;
