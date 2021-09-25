@@ -478,7 +478,7 @@ int main()
 
     duels = 0;
     reset_wins();
-    cout << "Ready to test strategy 2 (run 10000 times):\n";
+    cout << "Ready to test strategy 2 bruh (run 10000 times):\n";
     Press_any_key();
 
     do
