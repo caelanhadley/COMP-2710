@@ -475,9 +475,9 @@ int main()
     double b_per = ((double)b_win / (double)duels) * 100;
     double c_per = ((double)c_win / (double)duels) * 100;
 
-    cout << "Aaron won " << a_win << "/" << duels << " duels or " << setprecision(2) << a_per << "%\n";
-    cout << "Bob won " << b_win << "/" << duels << " duels or " << setprecision(2) << b_per << "%\n";
-    cout << "Charlie won " << c_win << "/" << duels << " duels or " << setprecision(2) << c_per << "%\n\n";
+    cout << "Aaron won " << a_win << "/" << duels << " duels or " << fixed << setprecision(2) << a_per << "%\n";
+    cout << "Bob won " << b_win << "/" << duels << " duels or " << fixed << setprecision(2) << b_per << "%\n";
+    cout << "Charlie won " << c_win << "/" << duels << " duels or " << fixed << setprecision(2) << c_per << "%\n\n";
     int a_wins_run1 = a_win;
 
     duels = 0;
@@ -495,9 +495,9 @@ int main()
     b_per = ((double)b_win / (double)duels) * 100;
     c_per = ((double)c_win / (double)duels) * 100;
 
-    cout << "Aaron won " << a_win << "/" << duels << " duels or " << a_per << "%\n";
-    cout << "Bob won " << b_win << "/" << duels << " duels or " << b_per << "%\n";
-    cout << "Charlie won " << c_win << "/" << duels << " duels or " << c_per << "%\n\n";
+    cout << "Aaron won " << a_win << "/" << duels << " duels or " << fixed << setprecision(2) << a_per << "%\n";
+    cout << "Bob won " << b_win << "/" << duels << " duels or " << fixed << setprecision(2) << b_per << "%\n";
+    cout << "Charlie won " << c_win << "/" << duels << " duels or " << fixed << setprecision(2) << c_per << "%\n\n";
 
     if (a_wins_run1 < a_win)
     {
