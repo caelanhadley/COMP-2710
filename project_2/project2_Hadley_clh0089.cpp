@@ -491,9 +491,9 @@ int main()
         duels++;
     } while (duels < NUM_RUNS);
 
-    double a_per = ((double)a_win / (double)duels) * 100;
-    double b_per = ((double)b_win / (double)duels) * 100;
-    double c_per = ((double)c_win / (double)duels) * 100;
+    a_per = ((double)a_win / (double)duels) * 100;
+    b_per = ((double)b_win / (double)duels) * 100;
+    c_per = ((double)c_win / (double)duels) * 100;
 
     cout << "Aaron won " << a_win << "/" << duels << " duels or " << a_per << "%\n";
     cout << "Bob won " << b_win << "/" << duels << " duels or " << b_per << "%\n";
