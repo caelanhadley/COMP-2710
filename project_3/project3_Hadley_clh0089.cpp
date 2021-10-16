@@ -99,7 +99,7 @@ vector<int> readfile(ifstream &inStream)
 void writefile(string filename, vector<int> contents)
 {
     ofstream outStream;
-    outStream.open(filename);
+    outStream.open((char *)filename.c_str());
     for (int i = 0; i < contents.size(); i++)
     {
         outStream << contents[i] << "\n";
