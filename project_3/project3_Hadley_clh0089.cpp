@@ -149,14 +149,14 @@ vector<int> sort(vector<int> iArray1, vector<int> iArray2)
 
     for (int i = 0; i < iArray2.size(); i++)
     {
-        for (int j = 0; j < iArray1.size(); j++)
+        for (int j = 0; j < result.size(); j++)
         {
             if (iArray2[i] <= result[j])
             {
                 result.insert(result.begin() + j, iArray2[i]);
                 break;
             }
-            if (j == iArray1.size() - 1)
+            else if (j == result.size() - 1)
             {
                 result.push_back(iArray2[i]);
             }
