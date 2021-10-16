@@ -69,7 +69,7 @@ int main()
     cout << "Enter the output file name: ";
     cin >> filename_o;
     writefile(filename_o, output);
-    cout << "*** Please check the new file -output.txt ***\n";
+    cout << "*** Please check the new file - " << filename_o << "***\n";
     cout << "*** Goodbye. ***\n";
 
     return 0;
