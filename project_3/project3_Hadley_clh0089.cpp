@@ -14,6 +14,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <cstdlib>
 using namespace std;
 
 const int MAX_SIZE = 100;
