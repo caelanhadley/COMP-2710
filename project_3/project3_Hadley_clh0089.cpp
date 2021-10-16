@@ -70,7 +70,7 @@ int main()
     cin >> filename_o;
     writefile(filename_o, output);
     cout << "*** Please check the new file -output.txt ***\n";
-    cout << "*** Goodbye. ***";
+    cout << "*** Goodbye. ***\n";
 
     return 0;
 }
