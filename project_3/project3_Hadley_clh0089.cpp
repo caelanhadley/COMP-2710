@@ -40,7 +40,7 @@ int main()
     cout << "*** Welcome to Caelan's sorting program ***\n";
     cout << "Enter the first input file name: ";
     cin >> filename_1;
-    inStream1.open("input1.txt"); //filename_1);
+    inStream1.open(filename_1);
     if (inStream1.fail())
     {
         cout << "Input file opening failed." << endl;
@@ -54,7 +54,7 @@ int main()
     cout << "Enter the second input file name: ";
     cin >> filename_2;
 
-    inStream2.open("input2.txt"); //filename_2);
+    inStream2.open(filename_2);
     if (inStream2.fail())
     {
         cout << "Input file opening failed." << endl;
