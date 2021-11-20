@@ -208,7 +208,6 @@ void add_question(ptr_node node_in) {
     if (cin.fail()){
         cin.clear();
         cout << "ERROR: Input was not numeric!";
-        exit(EXIT_FAILURE);
     }
 
     cap(temp);
@@ -270,7 +269,6 @@ ptr_node find_question(ptr_node head, int position, int num_of_questions) {
 
     if (position > num_of_questions - 1) {
         cout << "Warning: There are only " << num_of_questions << " questions in this quiz." << endl;
-        exit(EXIT_FAILURE);
         return NULL;
     }
     else if (position < 0) {
