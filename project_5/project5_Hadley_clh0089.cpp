@@ -92,22 +92,22 @@ void *consumer(void *ptr)
 
         // Assign the buffer data to the varible get_data
         // #3#BEGIN# DO NOT MODIFY THIS COMMENT LINE!
-        get_data = buffer
-                       // #3#END# DO NOT MODIFY THIS COMMENT LINE!
+        get_data = buffer;
+        // #3#END# DO NOT MODIFY THIS COMMENT LINE!
 
-                       // Prints out the content of what you get in get_data
-                       cout
-                   << "consumer consume item " << get_data << endl;
+        // Prints out the content of what you get in get_data
+        cout
+            << "consumer consume item " << get_data << endl;
 
         // Clear the buffer by assign value 0 to the buffer
         // #4#BEGIN# DO NOT MODIFY THIS COMMENT LINE!
-        buffer = 0
-            // #4#END# DO NOT MODIFY THIS COMMENT LINE!
+        buffer = 0;
+        // #4#END# DO NOT MODIFY THIS COMMENT LINE!
 
-            // Notify the condition varible of producer that good to go
-            // see step 5 example in producer
-            // #5#BEGIN# DO NOT MODIFY THIS COMMENT LINE!
-            pthread_cond_signal(&condp);
+        // Notify the condition varible of producer that good to go
+        // see step 5 example in producer
+        // #5#BEGIN# DO NOT MODIFY THIS COMMENT LINE!
+        pthread_cond_signal(&condp);
         // #5#END# DO NOT MODIFY THIS COMMENT LINE!
 
         // Unlock the mutex, see step 6 example in producer
