@@ -104,7 +104,7 @@ void *philosopher(void *arg)
 
         // please release one unit capacity of philosophers
         // #4#BEGIN# DO NOT MODIFY COMMENT LINE!
-        sem_post(&m);
+        sem_wait(&m);
         // #4#END# DO NOT MODIFY COMMENT LINE!
 
         sem_post(&chopsticks[left]);
@@ -118,8 +118,9 @@ int main(int argc, char **argv)
     // based on time(NULL) function result.
     // #5#BEGIN# DO NOT MODIFY COMMENT LINE!
     srand(time(NULL));
-    // #5#END# DO NOT MODIFY COMMENT LINE!
-    pthread_t philo[N];
+    sem_init(&m, 0, 4)
+        // #5#END# DO NOT MODIFY COMMENT LINE!
+        pthread_t philo[N];
 
     int i;
     // change your the following id into your banner id
@@ -133,7 +134,7 @@ int main(int argc, char **argv)
     for (i = 0; i < N; i++)
     {
         // #7#BEGIN# DO NOT MODIFY COMMENT LINE!
-        sem_init(&chopsticks[i], 0, 0);
+        sem_init(&chopsticks[i], 0, N);
         // #7#END# DO NOT MODIFY COMMENT LINE!
     }
 
