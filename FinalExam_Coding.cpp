@@ -104,7 +104,7 @@ void *philosopher(void *arg)
 
         // please release one unit capacity of philosophers
         // #4#BEGIN# DO NOT MODIFY COMMENT LINE!
-
+        sem_post(&m);
         // #4#END# DO NOT MODIFY COMMENT LINE!
 
         sem_post(&chopsticks[left]);
@@ -133,7 +133,7 @@ int main(int argc, char **argv)
     for (i = 0; i < N; i++)
     {
         // #7#BEGIN# DO NOT MODIFY COMMENT LINE!
-
+        sem_init(&chopsticks[i], 0, 0);
         // #7#END# DO NOT MODIFY COMMENT LINE!
     }
 
@@ -147,7 +147,7 @@ int main(int argc, char **argv)
     for (i = 0; i < N; i++)
     {
         // #9#BEGIN# DO NOT MODIFY COMMENT LINE!
-
+        pthread_create(&philo[i], NULL, philosopher, &philosophers[i])
         // #9#END# DO NOT MODIFY COMMENT LINE!
     }
 
@@ -165,7 +165,7 @@ int main(int argc, char **argv)
 
     // also do not forgot to destroy the m semaphore
     // #10#BEGIN# DO NOT MODIFY COMMENT LINE!
-
+    sem_destroy(&m);
     // #10#END# DO NOT MODIFY COMMENT LINE!
 
     return 0;
