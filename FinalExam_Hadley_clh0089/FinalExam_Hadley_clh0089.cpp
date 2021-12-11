@@ -104,7 +104,7 @@ void *philosopher(void *arg)
 
         // please release one unit capacity of philosophers
         // #4#BEGIN# DO NOT MODIFY COMMENT LINE!
-        sem_wait(&m);
+        sem_post(&m);
         // #4#END# DO NOT MODIFY COMMENT LINE!
 
         sem_post(&chopsticks[left]);
