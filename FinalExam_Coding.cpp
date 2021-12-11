@@ -118,9 +118,9 @@ int main(int argc, char **argv)
     // based on time(NULL) function result.
     // #5#BEGIN# DO NOT MODIFY COMMENT LINE!
     srand(time(NULL));
-    sem_init(&m, 0, 4)
-        // #5#END# DO NOT MODIFY COMMENT LINE!
-        pthread_t philo[N];
+    sem_init(&m, 0, 4);
+    // #5#END# DO NOT MODIFY COMMENT LINE!
+    pthread_t philo[N];
 
     int i;
     // change your the following id into your banner id
