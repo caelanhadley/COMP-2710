@@ -32,19 +32,23 @@ sem_t m;
 // The id of 5 philosophers stored in the integer array philosophers
 int philosophers[N] = {0, 1, 2, 3, 4};
 
-void delay (int len) {
+void delay(int len)
+{
     int i = rand() % len;
     int x;
-    while (i > 0) {
+    while (i > 0)
+    {
         x = rand() % len;
-        while (x > 0) {
+        while (x > 0)
+        {
             x--;
         }
         i--;
     }
 }
 
-void *philosopher (void* arg) {
+void *philosopher(void *arg)
+{
     int i = *(int *)arg;
 
     // index right hand chopstick as the same id of the philosopher
@@ -62,7 +66,8 @@ void *philosopher (void* arg) {
     int left = (i + 1) % 5;
     // #2#END# DO NOT MODIFY COMMENT LINE!
 
-    while (1) {
+    while (1)
+    {
         printf("Philosopher %d is thinking.\n", i);
         delay(60000);
 
@@ -74,25 +79,22 @@ void *philosopher (void* arg) {
         // THAT IS WHY use need to use &, because the semaphore need to be modifie
         sem_wait(&m);
 
-
         // Please wait for first (right) chopstick to use
         // Pay attention to the & operator
-		// #3#BEGIN# DO NOT MODIFY COMMENT LINE!
-        sem_wait(&chopsticks[right])
-		// #3#END# DO NOT MODIFY COMMENT LINE!
+        // #3#BEGIN# DO NOT MODIFY COMMENT LINE!
+        sem_wait(&chopsticks[right]);
+        // #3#END# DO NOT MODIFY COMMENT LINE!
 
         printf("Philosopher %d picked up Chopstick %d, can NOT eat with one chopstick.\n", i, right);
 
         // wait to use the left chopstick
         sem_wait(&chopsticks[left]);
 
-
         printf("Philosopher %d picked up Chopstick %d, now is eating with two chopsticks.\n", i, left);
         delay(60000);
 
         // release the first chopstick, increase the semaphore 1 by sem_post
-		sem_post(&chopsticks[right]);
-
+        sem_post(&chopsticks[right]);
 
         printf("Philosopher %d put down Chopstick %d.\n", i, right);
 
@@ -110,8 +112,9 @@ void *philosopher (void* arg) {
     }
 }
 
-int main (int argc, char **argv) {
-	// Use srand function to create dynamic random numbers
+int main(int argc, char **argv)
+{
+    // Use srand function to create dynamic random numbers
     // based on time(NULL) function result.
     // #5#BEGIN# DO NOT MODIFY COMMENT LINE!
     srand(time(NULL));
@@ -127,10 +130,11 @@ int main (int argc, char **argv) {
 
     // use sem_init(&semaphore_variable, 0, initial_semaphore_value) function
     // to initialize all the chopstick semaphore
-    for (i=0; i<N; i++) {
-    // #7#BEGIN# DO NOT MODIFY COMMENT LINE!
+    for (i = 0; i < N; i++)
+    {
+        // #7#BEGIN# DO NOT MODIFY COMMENT LINE!
 
-    // #7#END# DO NOT MODIFY COMMENT LINE!
+        // #7#END# DO NOT MODIFY COMMENT LINE!
     }
 
     // initialize the new semaphore m
@@ -140,20 +144,23 @@ int main (int argc, char **argv) {
     // #8#END# DO NOT MODIFY COMMENT LINE!
 
     // use pthread_create function to create threads
-    for (i=0; i<N; i++) {
+    for (i = 0; i < N; i++)
+    {
         // #9#BEGIN# DO NOT MODIFY COMMENT LINE!
 
         // #9#END# DO NOT MODIFY COMMENT LINE!
     }
 
     // put threads into the system
-    for (i=0; i<N; i++) {
+    for (i = 0; i < N; i++)
+    {
         pthread_join(philo[i], NULL);
     }
 
     // destroy semaphores
-    for (i=0; i<N; i++) {
-       sem_destroy(&chopsticks[i]);
+    for (i = 0; i < N; i++)
+    {
+        sem_destroy(&chopsticks[i]);
     }
 
     // also do not forgot to destroy the m semaphore
