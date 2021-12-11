@@ -147,7 +147,7 @@ int main(int argc, char **argv)
     for (i = 0; i < N; i++)
     {
         // #9#BEGIN# DO NOT MODIFY COMMENT LINE!
-        pthread_create(&philo[i], NULL, philosopher, &philosophers[i])
+        pthread_create(&philo[i], NULL, philosopher, &philosophers[i]);
         // #9#END# DO NOT MODIFY COMMENT LINE!
     }
 
